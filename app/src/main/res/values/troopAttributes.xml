@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TroopList">
+        <attr name="name" format="string"/>
+        <attr name="ATK" format="integer"/>
+        <attr name="DEF" format="integer"/>
+        <attr name="DMGmin" format="integer"/>
+        <attr name="DMGmax" format="integer"/>
+        <attr name="SPEED" format="integer"/>
+        <attr name="HP" format="integer"/>
+        <attr name="RANGE" format="integer"/>
+        <attr name="SPECIALS" format="enum">
+            <enum name="Jousting" value="0"/>
+            <enum name="Ranged" value="1"/>
+            <enum name="DmgReduction" value="2"/>
+            <enum name="DoubleAttack" value="3"/>
+            <enum name="BreathAttack" value="4"/>
+            <enum name="SpellImmunity" value="5"/>
+            <enum name="Healing" value="6"/>
+        </attr>
+    </declare-styleable>
+</resources>

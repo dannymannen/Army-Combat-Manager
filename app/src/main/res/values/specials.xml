@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="special_array">
+        <item>Jousting</item>
+        <item>Ranged</item>
+        <item>DmgReduction</item>
+        <item>DoubleAttack</item>
+        <item>BreathAttack</item>
+        <item>SpellImmunity</item>
+        <item>Healing</item>
+    </string-array>
+</resources>

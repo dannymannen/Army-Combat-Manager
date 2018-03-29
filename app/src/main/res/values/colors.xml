@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAttackerList">#97B</color>
+    <color name="colorDefenderList">#7B9</color>
+    <color name="colorListItemDivider">#FF4081</color>
+    <color name="colorMainList">#66AFFF</color>
+    <color name="colorListSelector">#DDD</color>
+    <color name="colorTable">#FF909090</color>
+    <color name="colorSpecialList">#F6AF6F</color>
+    <color name="colorFightButton">#FF5F2F</color>
+</resources>

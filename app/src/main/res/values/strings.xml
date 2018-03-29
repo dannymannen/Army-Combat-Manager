@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Army Combat Manager</string>
+    <string name="tab_name_1">Manage troops</string>
+    <string name="tab_name_2">Combat</string>
+    <string name="add">ADD</string>
+    <string name="remove">REMOVE</string>
+    <string name="troopInfo">Troop stat info:</string>
+    <string name="edit">EDIT</string>
+    <string name="attack">Attack: </string>
+    <string name="defence">Defence: </string>
+    <string name="dmgmin">DMG Min: </string>
+    <string name="dmgmax">DMG Max: </string>
+    <string name="speed">Speed: </string>
+    <string name="hp">HP: </string>
+    <string name="range">Range: </string>
+    <string name="special">Special: </string>
+    <string name="roll">Lucky Roll (d20): </string>
+    <string name="rollHint">1-20</string>
+    <string name="amount">Amount: </string>
+    <string name="overzero">> 0</string>
+    <string name="rangedef">Range to Defender: </string>
+    <string name="numberorblank">>= 0 or blank</string>
+    <string name="jousting">Jousting to Defender: </string>
+    <string name="meleepenalty">Melee Penalty</string>
+    <string name="defender">DEFENDER</string>
+    <string name="retaliation">Retaliation</string>
+    <string name="rangecover">Range Cover</string>
+    <string name="dmgreduction">DMG Reduction (%): </string>
+    <string name="dmgreductionHint">0-100 or blank</string>
+    <string name="vs">V.S</string>
+    <string name="fight">FIGHT</string>
+    <string name="addtrooptype">Add new troop type: </string>
+    <string name="typename">Name: </string>
+    <string name="typenamehint">Troop name</string>
+    <string name="pertroop">Stats per troop: </string>
+    <string name="specialhint">Ability name</string>
+    <string name="addspecial">ADD SPECIAL</string>
+    <string name="attacker">ATTACKER </string>
+    <string name="result">RESULT</string>
+    <string name="lost">Lost: </string>
+    <string name="remaining">Remaining: </string>
+    <string name="editspecial">EDIT SPECIAL</string>
+</resources>

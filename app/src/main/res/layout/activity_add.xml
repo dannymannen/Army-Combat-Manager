@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/AddHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/addtrooptype"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/NameInput"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/AddHead"
+            android:gravity=""
+            android:text="@string/typename"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/NameInput"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/AddHead"
+            android:layout_toEndOf="@+id/NameText"
+            android:hint="@string/typenamehint"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/PerTroopText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/NameInput"
+            android:gravity=""
+            android:text="@string/pertroop"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/PerTroopText">
+
+            <TextView
+                android:id="@+id/AttackText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/AttackInput"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/DmgMinInput"
+                android:gravity=""
+                android:text="@string/attack"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/AttackInput"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@+id/AttackText"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/DefendText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/DefendInput"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/DefendInput"
+                android:gravity=""
+                android:text="@string/defence"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DefendInput"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/DmgMinText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/DmgMinInput"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/AttackText"
+                android:gravity=""
+                android:text="@string/dmgmin"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DmgMinInput"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/AttackInput"
+                android:layout_toEndOf="@+id/DmgMinText"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/DmgMaxText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/DmgMinInput"
+                android:layout_below="@+id/DefendText"
+                android:layout_toEndOf="@+id/DmgMinInput"
+                android:gravity=""
+                android:text="@string/dmgmax"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/DmgMaxInput"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/DefendText"
+                android:layout_toEndOf="@+id/DmgMaxText"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/SpeedText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/SpeedInput"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/DmgMinText"
+                android:layout_toStartOf="@+id/DmgMinInput"
+                android:gravity=""
+                android:text="@string/speed"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/SpeedInput"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/DmgMinText"
+                android:layout_toEndOf="@+id/SpeedText"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/HitPointText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/HitPointInput"
+                android:layout_alignEnd="@+id/DefendText"
+                android:layout_alignStart="@+id/DefendText"
+                android:layout_below="@+id/DmgMaxInput"
+                android:gravity=""
+                android:text="@string/hp"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/HitPointInput"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/DefendInput"
+                android:layout_below="@+id/DmgMaxInput"
+                android:hint="@string/overzero"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/RangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/RangeInput"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/SpeedText"
+                android:layout_toStartOf="@+id/SpeedInput"
+                android:gravity=""
+                android:text="@string/range"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/RangeInput"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/SpeedText"
+                android:layout_toEndOf="@+id/RangeText"
+                android:hint="@string/numberorblank"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/SpecialText"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/SpecialInput"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RangeText"
+                android:layout_toStartOf="@+id/RangeInput"
+                android:gravity=""
+                android:text="@string/special"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <AutoCompleteTextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/SpecialInput"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/RangeText"
+                android:layout_toEndOf="@+id/SpecialText"
+                android:hint="@string/specialhint" />
+
+            <Button
+                android:id="@+id/addSpecialButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/SpecialList"
+                android:layout_alignParentEnd="true"
+                android:text="@string/addspecial"/>
+
+            <ListView
+                android:id="@+id/SpecialList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/SpecialText"
+                android:background="@color/colorSpecialList" />
+
+            <Button
+                android:id="@+id/addTroopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/SpecialList"
+                android:text="@string/add"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
