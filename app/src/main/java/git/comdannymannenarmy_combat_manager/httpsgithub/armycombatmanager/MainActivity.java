@@ -466,19 +466,24 @@ public class MainActivity extends AppCompatActivity {
 
                     double ATKDMGfinal = ATKDMGbase*ATKbuffs*(1-ATKR1)*(1-ATKR2)*(1-ATKR3)*(1-ATKR4)*(1-ATKR5Melee)*(1-ATKR5Range)*(1-ATKR6)*(1-ATKR7)*(1-ATKR8);
                     int defendersKilled = (int) ATKDMGfinal/defenderHP;
+                    if (defendersKilled >= defenderAmount) {
+                        defendersKilled = defenderAmount;
+                    }
                     int defendersLeft = defenderAmount - defendersKilled;
                     if (defendersLeft < 0) {
                         defendersLeft = 0;
                     }
+                    int lastDefenderHp = (int) ATKDMGfinal - (defendersKilled*defenderHP);
+                    int lastDefenderHpLeft = defenderHP - lastDefenderHp;
                     String defenderName = selectedDefenderFromList.showname();
-                    defenderKilledString = defendersKilled + " out of " + defenderAmount + " " + defenderName + "(s) were killed.\n" + defendersLeft + " " + defenderName + "(s) remaining.";
+                    defenderKilledString = defendersKilled + " out of " + defenderAmount + " " + defenderName + "(s) were killed.\n" + defendersLeft + " " + defenderName + "(s) remaining.\n Last " + defenderName + " took " + lastDefenderHp + " HP in damage and has " + lastDefenderHpLeft + " HP left.";
 
                     // DEFENDER FIGHT
                     if (retaliation == 1) {
                         // Base damage for defender
-                        double DEFDMGbase = (((defenderRoll/20)*(defenderDMGmax-defenderDMGmin))+defenderDMGmin)*defenderAmount;
+                        double DEFDMGbase = (((defenderRoll / 20) * (defenderDMGmax - defenderDMGmin)) + defenderDMGmin) * defenderAmount;
                         // Attack-Defence difference buff
-                        double DEFADDiff = defenderATK-attackerDEF;
+                        double DEFADDiff = defenderATK - attackerDEF;
                         double DEFI1 = 0;
                         if (DEFADDiff >= 0) {
                             DEFI1 = 0.05 * DEFADDiff;
@@ -489,7 +494,7 @@ public class MainActivity extends AppCompatActivity {
                         // Total buff DMG for defender
                         double DEFbuffs = 1 + DEFI1;
                         // Defence-Attack difference reduction
-                        double DEFDADiff = attackerDEF-defenderATK;
+                        double DEFDADiff = attackerDEF - defenderATK;
                         double DEFR1 = 0;
                         if (DEFDADiff >= 0) {
                             DEFR1 = 0.025 * DEFDADiff;
@@ -503,14 +508,19 @@ public class MainActivity extends AppCompatActivity {
                             DEFRMelee = 0.5;
                         }
 
-                        double DEFDMGfinal = DEFDMGbase*DEFbuffs*(1-DEFR1)*(1-DEFRMelee);
-                        int attackersKilled = (int) DEFDMGfinal/attackerHP;
+                        double DEFDMGfinal = DEFDMGbase * DEFbuffs * (1 - DEFR1) * (1 - DEFRMelee);
+                        int attackersKilled = (int) DEFDMGfinal / attackerHP;
+                        if (attackersKilled >= attackerAmount) {
+                            attackersKilled = attackerAmount;
+                        }
                         int attackersLeft = attackerAmount - attackersKilled;
                         if (attackersLeft < 0) {
                             attackersLeft = 0;
                         }
+                        int lastAttackerHp = (int) DEFDMGfinal - (attackersKilled*attackerHP);
+                        int lastAttackerHpLeft = attackerHP - lastAttackerHp;
                         String attackerName = selectedAttackerFromList.showname();
-                        retaliationString = "\nRetaliation:\n" + attackersKilled + " out of " + attackerAmount + " " + attackerName + "(s) were killed.\n" + attackersLeft + " " + attackerName + "(s) remaining.";
+                        retaliationString = "\nRetaliation:\n" + attackersKilled + " out of " + attackerAmount + " " + attackerName + "(s) were killed.\n" + attackersLeft + " " + attackerName + "(s) remaining.\n Last " + attackerName + " took " + lastAttackerHp + " HP in damage and has " + lastAttackerHpLeft + " HP left.";
                     }
 
                     // Display the results in a dialog box
